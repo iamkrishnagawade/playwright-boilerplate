@@ -23,3 +23,6 @@ trace.zip
 # OS Specific
 .DS_Store
 Thumbs.db
+
+# Mock data
+db.json

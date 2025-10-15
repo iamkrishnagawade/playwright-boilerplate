@@ -12,7 +12,8 @@
     "allure:serve": "npx allure serve allure-results",
     "allure:open": "npx allure open allure-report",
     "prettier": "prettier --write 'src/**/*.{ts,tsx,js,json,md}'",
-    "clean:reports": "npx rimraf playwright-report allure-report allure-results test-results"
+    "clean:reports": "npx rimraf playwright-report allure-report allure-results test-results",
+    "mock-server:watch": "json-server --watch db.json --port 4000"
   },
   "repository": {
     "type": "git",
@@ -28,16 +29,20 @@
   "homepage": "https://github.com/iamkrishnagawade/playwright-boilerplate#readme",
   "devDependencies": {
     "@playwright/test": "^1.56.0",
+    "@types/faker": "^6.6.8",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "json-server": "^1.0.0-beta.3",
     "playwright": "^1.56.0",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.1.0",
     "allure-playwright": "^3.4.1",
+    "axios": "^1.12.2",
     "dotenv": "^17.2.3"
   }
 }
