@@ -12,7 +12,7 @@
     "allure:serve": "npx allure serve allure-results",
     "allure:open": "npx allure open allure-report",
     "prettier": "prettier --write 'src/**/*.{ts,tsx,js,json,md}'",
-    "clean:reports": "npx rimraf playwright-report allure-report allure-results test-results",
+    "clean:reports": "npx rimraf playwright-report allure-report allure-results test-results"
   },
   "repository": {
     "type": "git",
