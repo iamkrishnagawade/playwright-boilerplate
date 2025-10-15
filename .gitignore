@@ -1,2 +1,25 @@
-/node_modules
-/.env
+# Node & TypeScript
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+*.log
+
+# Playwright Reports & Artifacts
+playwright-report/
+allure-results/
+allure-report/
+test-results/
+*.zip
+*.mp4
+*.png
+trace.zip
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+
+# OS Specific
+.DS_Store
+Thumbs.db

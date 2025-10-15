@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default defineConfig({
-    testDir: "./tests",
+    testDir: "./src/tests",
     timeout: 30 * 1000,
     retries: 1,
     use: {
@@ -13,15 +13,15 @@ export default defineConfig({
         screenshot: "only-on-failure",
         video: "retain-on-failure",
     },
-    reporter: [["html", { outputFolder: "reports/html" }], ["list"], ["allure-playwright"]],
+    reporter: [
+        ['list'],
+        ['html', { open: 'never', outputFolder: 'playwright-report' }],
+        ['allure-playwright']
+    ],
     projects: [
         {
             name: "chromium",
             use: { ...devices["Desktop Chrome"] }
-        },
-        {
-            name: "firefox",
-            use: { ...devices["Desktop Firefox"] }
         }
     ]
 });
