@@ -4,7 +4,8 @@ import { Env } from '../utils/env';
 import { Logger } from '../utils/logger';
 
 test.describe('Login Tests', () => {
-  test('should login successfully', async ({ page }) => {
+  test('[@smoke][@critical] should login successfully', async ({ page }, testInfo) => {
+    testInfo.annotations.push({ type: "tag", description: "smoke" });
     const loginPage = new LoginPage(page);
     await loginPage.navigateTo(Env.BASE_URL);
     Logger.info('Navigated to login page');
